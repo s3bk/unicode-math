@@ -13,7 +13,7 @@ pub enum AtomType {
     BotAccentWide,
     Alpha,
     Fence,
-    Operator,
+    Operator(bool),
     Over,
     Under,
     Inner,
