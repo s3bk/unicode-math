@@ -25,7 +25,7 @@ pub struct Symbol {
     pub codepoint: char,
     pub name: &'static str,
     pub description: &'static str,
-    pub kind: AtomType,
+    pub atom_type: AtomType,
 }
 
 pub static SYMBOLS: &'static [Symbol] = &include!(concat!(env!("OUT_DIR"), "/symbols.rs"));

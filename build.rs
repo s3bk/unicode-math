@@ -53,7 +53,7 @@ fn main() {
     for line in source.lines() {
         if let Some(c) = re.captures(line) {
             writeln!(out,
-                r"    Symbol {{ codepoint: '\u{{{}}}', name: {:?}, kind: AtomType::{}, description: {:?} }},",
+                r"    Symbol {{ codepoint: '\u{{{}}}', name: {:?}, atom_type: AtomType::{}, description: {:?} }},",
                 &c[1], &c[2], atom_from_tex(&c[2], &c[3]), &c[4]
             ).unwrap();
         }
